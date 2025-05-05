@@ -76,6 +76,7 @@ export const BannerCarousel = () => {
               <img
                 src={images.image}
                 alt="Carousel"
+                loading="lazy"
                 className="w-full h-[calc(100vh-80px)] object-fill"
               />
             </div>
