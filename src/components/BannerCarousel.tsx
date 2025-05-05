@@ -2,10 +2,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// import image1 from "../../public/image1.png";
-// import image2 from "../assets/images/carousel/image2.png";
-// import mobImage1 from "../../public/mobimg1.png";
-// import mobImage2 from "../assets/images/carousel/mobimg2.png";
+import image1 from "../assets/images/carousel/image1.png";
+import image2 from "../assets/images/carousel/image2.png";
+import mobImage1 from "../assets/images/carousel/mobimg1.png";
+import mobImage2 from "../assets/images/carousel/mobimg2.png";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 type CarouselImagesType = {
@@ -37,22 +37,22 @@ export const BannerCarousel = () => {
   const desktopCarouselImages: CarouselImagesType[] = [
     {
       id: "img1",
-      image: "/image1.png",
+      image: image1,
     },
     {
       id: "img2",
-      image: "/image2.png",
+      image: image2,
     },
   ];
 
   const mobileCarouselImages: CarouselImagesType[] = [
     {
       id: "img1",
-      image: "/mobimg1.png",
+      image: mobImage1,
     },
     {
       id: "img2",
-      image: "/mobimg2.png",
+      image: mobImage2,
     },
   ];
 
