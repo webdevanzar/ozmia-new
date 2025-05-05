@@ -1,6 +1,5 @@
 import { useOutletContext } from "react-router-dom";
 import { AboutSection } from "./AboutSection";
-import { BannerSection } from "./BannerSection";
 import { CollectionSection } from "./CollectionSection";
 import { FeedbackSection } from "./FeedbackSection";
 import { HistorySection } from "./HistorySection";
@@ -20,7 +19,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <BannerSection /> */}
       <div ref={refs.aboutRef}>
         <AboutSection />
       </div>
