@@ -43,11 +43,11 @@ export const HistorySection = () => {
       <div className="lg:flex justify-between items-start w-full">
         <div className="w-full lg:w-1/3 flex flex-col lg:gap-y-10 lg:pt-5">
           <h2 className="text-primary text-xl xl:text-[32px] font-semibold leading-snug tracking-[1px]">
-            Jewelry that speaks the language of love,	&nbsp; 
+            Jewelry that speaks the language of love, &nbsp;
             <span className="hidden xl:inline">
               <br />
             </span>
-             milestones,&nbsp;
+            milestones,&nbsp;
             <span className="hidden xl:inline">
               <br />
             </span>
@@ -76,7 +76,7 @@ export const HistorySection = () => {
                 {background.name}
               </h2>
               <div className="flex justify-center p-4 lg:pt-4">
-                <button className="text-primary text-sm font-semibold px-1 md:px-2  2xl:px-5 py-[4px] border-[2px] border-primary rounded-lg w-2/3 hover:font-bold">
+                <button className="text-primary text-sm font-semibold px-1 md:px-2  2xl:px-5 py-[4px] border-[1px] sm:border-[2px] border-primary rounded-lg w-2/3 hover:font-bold">
                   Explore
                 </button>
               </div>
