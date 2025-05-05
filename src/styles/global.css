@@ -22,7 +22,8 @@ body {
   display: block;
   width: 0;
   height: 2px;
-  background: #fffcad;
+  background: #004a25;
+  /* #fffcad */
   transition: width 0.3s;
 }
 

@@ -98,10 +98,10 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
             <li
               key={navitem.id}
               onClick={() => navitem.link && scrollTo(navitem.link)}
-              className={`text-base cursor-pointer ${
+              className={`text-base cursor-pointer font-semibold ${
                 navitem.id !== "home"
                   ? "cool-link"
-                  : "border-b-2 border-[#FFFCAD]"
+                  : "border-b-2 border-[#004a25]"
               }`}
             >
               {navitem.name}
