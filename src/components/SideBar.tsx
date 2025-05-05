@@ -69,11 +69,10 @@ export const SideBar: React.FC<SideBarProps> = ({
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className="h-screen w-2/3 p-5 right-0 bottom-0 sidebar-bg text-white z-50 fixed"
     >
-      <div className="flex justify-end items-center h-1/6">
+      <div className="flex justify-end items-end h-1/6">
         <IoMdCloseCircleOutline
           onClick={() => onClose()}
           size={30}
-          className="mt-6"
         />
       </div>
       <ul className="flex flex-col space-y-8 pt-10">
@@ -81,7 +80,12 @@ export const SideBar: React.FC<SideBarProps> = ({
           <li
             className="text-sm"
             key={section.id}
-            onClick={() => section.link && scrollTo(section.link)}
+            onClick={() => {
+              if (section.link) {
+                scrollTo(section.link);
+              }
+              onClose();
+            }}
           >
             {section.name}
           </li>
