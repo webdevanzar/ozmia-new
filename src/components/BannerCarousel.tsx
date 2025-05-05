@@ -37,22 +37,22 @@ export const BannerCarousel = () => {
   const desktopCarouselImages: CarouselImagesType[] = [
     {
       id: "img1",
-      image: "/public/image1.png",
+      image: "/image1.png",
     },
     {
       id: "img2",
-      image: "/public/image2.png",
+      image: "/image2.png",
     },
   ];
 
   const mobileCarouselImages: CarouselImagesType[] = [
     {
       id: "img1",
-      image: "/public/mobimg1.png",
+      image: "/mobimg1.png",
     },
     {
       id: "img2",
-      image: "/public/mobimg2.png",
+      image: "/mobimg2.png",
     },
   ];
 
