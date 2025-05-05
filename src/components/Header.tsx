@@ -5,7 +5,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { FiPhone } from "react-icons/fi";
 import type { IconType } from "react-icons";
 
-import logo from "../assets/images/navbaricons/logo.svg";
+import logo from "../assets/images/navbaricons/logogreen.svg";
 
 
 import { SideBar } from "./SideBar";
@@ -88,7 +88,7 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
 
   return (
     //TODO: bg-gradient
-    <header className="w-full h-16 md:h-20 bg-transparent  flex justify-between px-5 md:p-0 md:justify-around items-center md:border-b-2 text-[#FFFCAD]">
+    <header className="w-full h-16 md:h-20 bg-white  flex justify-between px-5 md:p-0 md:justify-around items-center  text-primary">
       <div className="w-[15%] sm:w-[20%] md:w-[30%] relative">
         <img src={logo} alt="Logo" className="absolute -top-4 cursor-pointer z-10"/>
       </div>
@@ -125,7 +125,7 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
         ) : (
           <div className="flex md:hidden cursor-pointer">
             <HiMenuAlt2
-              color="white"
+              color="green"
               size={30}
               onClick={() => setIsShow(true)}
             />
