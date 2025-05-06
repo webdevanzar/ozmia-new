@@ -70,7 +70,7 @@ export const SideBar: React.FC<SideBarProps> = ({
       className="h-[100dvh] w-2/3 p-5 right-0 bottom-0 sidebar-bg text-white z-50 fixed overflow-y-hidden"
     >
       <div className="h-5/6 flex flex-col justify-start">
-        <div className="flex justify-end h-1/6">
+        <div className="flex justify-end items-center h-1/6">
           <IoMdCloseCircleOutline onClick={() => onClose()} size={30} />
         </div>
         <ul className="flex flex-col space-y-8 pt-5 h-5/6">

@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import { useRef } from "react";
 import { BannerSection } from "../components/BannerSection";
 import { BannerCarousel } from "../components/BannerCarousel";
+import { GoldRate } from "../components/GoldRate";
 
 export const Layout = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export const Layout = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <GoldRate />
       <div className="bg-[linear-gradient(296.61deg,_#00CF67_13.41%,_#009C4E_29.39%,_#008542_54.49%,_#006131_68.42%,_#004A25_99.14%)]">
         <Header
           scrollTo={scrollTo}
