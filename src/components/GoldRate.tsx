@@ -37,7 +37,7 @@ export const GoldRate = () => {
     if (isMobile) {
       const interval = setInterval(() => {
         setShowOne((prev) => !prev);
-      }, 3000);
+      }, 2500);
 
       return () => clearInterval(interval);
     }
