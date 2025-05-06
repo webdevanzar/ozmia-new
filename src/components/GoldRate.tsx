@@ -50,16 +50,16 @@ export const GoldRate = () => {
           Today's Gold Rate : {date}
         </p>
         <ul className="hidden md:flex justify-between items-center gap-x-40 text-xs font-thin text-white pl-10">
-          <li>Gold Rate (1 Gram): ₹{(goldRate / 8).toFixed(2)}</li>
-          <li>Gold Rate (8 Grams): ₹{goldRate}</li>
+          <li>1 Gram : ₹{(goldRate / 8).toFixed(2)}</li>
+          <li>8 Grams : ₹{goldRate}</li>
         </ul>
 
         {/* Mobile View: toggle between 1g and 8g */}
         <div className="block md:hidden text-[10px] font-thin text-white">
           {showOne ? (
-            <p>Gold Rate (1 Gram): ₹{(goldRate / 8).toFixed(2)}</p>
+            <p>1 Gram : ₹{(goldRate / 8).toFixed(2)}</p>
           ) : (
-            <p>Gold Rate (8 Grams): ₹{goldRate}</p>
+            <p>8 Grams : ₹{goldRate}</p>
           )}
         </div>
       </div>
