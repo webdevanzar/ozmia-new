@@ -7,7 +7,6 @@ import type { IconType } from "react-icons";
 
 import logo from "../assets/images/navbaricons/logogreen.svg";
 
-
 import { SideBar } from "./SideBar";
 
 type NavItemsType = {
@@ -65,12 +64,12 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
     {
       id: "locaton",
       name: "Location",
-      src: SlLocationPin ,
+      src: SlLocationPin,
     },
     {
       id: "phone",
       name: "Phone",
-      src: FiPhone ,
+      src: FiPhone,
     },
   ];
 
@@ -90,7 +89,11 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
     //TODO: bg-gradient
     <header className="w-full h-16 md:h-20 bg-white  flex justify-between px-5 md:p-0 md:justify-around items-center  text-primary">
       <div className="w-[20%] sm:w-[20%] md:w-[30%] relative">
-        <img src={logo} alt="Logo" className="absolute -top-4 cursor-pointer z-10"/>
+        <img
+          src={logo}
+          alt="Logo"
+          className="absolute -top-4 cursor-pointer z-10"
+        />
       </div>
       <nav>
         <ul className="md:flex hidden justify-between items-center w-2/3 space-x-16">
@@ -111,7 +114,7 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
       </nav>
       <div className="hidden lg:flex items-center space-x-16 min-w-[90px] cursor-pointer">
         {iconSection.map((icon) => (
-          <icon.src size={18}/>
+          <icon.src key={icon.id} size={18} />
         ))}
       </div>
       <AnimatePresence>
@@ -125,7 +128,7 @@ export const Header = ({ scrollTo, refs }: HeaderProps) => {
         ) : (
           <div className="flex md:hidden cursor-pointer">
             <HiMenuAlt2
-              color="green"
+              color="#004A25"
               size={30}
               onClick={() => setIsShow(true)}
             />

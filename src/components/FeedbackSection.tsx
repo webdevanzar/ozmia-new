@@ -59,7 +59,7 @@ export const FeedbackSection = () => {
       feedback:
         "Lorem ipsum dolor sit amet consectetur. Amet a adipiscing eget a felis. Vitae faucibus mauris bibendum cras vel sed phasellus at. Purus blandit arcu magna nisi mattis mattis tortor. Sit duis nulla egestas elit morbi ac nisl. Felis eget.",
       imagePath: man1,
-      name: "Cooper",
+      name: "Coopers",
     },
     {
       date: "Feb 2024",

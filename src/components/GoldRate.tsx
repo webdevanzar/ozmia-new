@@ -3,38 +3,66 @@ import { useEffect, useState } from "react";
 
 export const GoldRate = () => {
   const storyBlockApi = useStoryblokApi();
-  const [rates, setRates] = useState({ gold: null, silver: null });
+  const [goldRate, setGoldRate] = useState(0);
+  const [date, setDate] = useState("");
+  const [showOne, setShowOne] = useState(false);
 
   const fetchRates = async () => {
     try {
       const { data } = await storyBlockApi.get("cdn/stories/daily-rates");
       const content = data.story.content;
 
-      setRates({
-        gold: content.gold_rate,
-        silver: content.silver_rate,
-      });
+      setGoldRate(content.gold_rate);
     } catch (error) {
       console.error("Error fetching rates:", error);
     }
   };
 
+  const fetchDate = () => {
+    const now = new Date();
+    const formatted = `${now.getDate()}/${
+      now.getMonth() + 1
+    }/${now.getFullYear()}`;
+    setDate(formatted);
+  };
+
   useEffect(() => {
+    fetchDate();
     fetchRates();
   }, []);
 
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
 
-   console.log(rates);
-   
+    if (isMobile) {
+      const interval = setInterval(() => {
+        setShowOne((prev) => !prev);
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   return (
-    <div className="w-full flex items-center h-[35px] bg-gradient-to-r from-primary via-[#008542] to-[#00CF67] ">
-      
-        <ul className="flex justify-between items-center gap-x-40 text-xs font-thin text-white pl-10">
-          <li>Gold Rate 22 KT (916) : 8,709.00/g</li>
-          <li>Gold Rate 24 KT (999) : 9,475.00/g</li>
-          <li>Gold Rate 18 KT (750) : 7,109.00/g</li>
+    <div className="w-full flex items-center justify-between h-[35px] bg-gradient-to-r from-[#765D03] to-[#CFB34C] ">
+      <div className="flex justify-around md:justify-between w-full lg:w-4/5 xl:h-3/5">
+        <p className="text-xs md:text-sm font-thin text-white md:pl-10">
+          Today's Gold Rate : {date}
+        </p>
+        <ul className="hidden md:flex justify-between items-center gap-x-40 text-xs font-thin text-white pl-10">
+          <li>Gold Rate (1 Gram): ₹{(goldRate / 8).toFixed(2)}</li>
+          <li>Gold Rate (8 Grams): ₹{goldRate}</li>
         </ul>
-    
+
+        {/* Mobile View: toggle between 1g and 8g */}
+        <div className="block md:hidden text-[10px] font-thin text-white">
+          {showOne ? (
+            <p>Gold Rate (1 Gram): ₹{(goldRate / 8).toFixed(2)}</p>
+          ) : (
+            <p>Gold Rate (8 Grams): ₹{goldRate}</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
