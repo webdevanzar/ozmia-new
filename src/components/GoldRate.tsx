@@ -27,7 +27,7 @@ export const GoldRate = () => {
    console.log(rates);
    
   return (
-    <div className="w-full flex items-center h-[35px] bg-gradient-to-r from-[#765D03] to-[#CFB34C] ">
+    <div className="w-full flex items-center h-[35px] bg-gradient-to-r from-primary via-[#008542] to-[#00CF67] ">
       
         <ul className="flex justify-between items-center gap-x-40 text-xs font-thin text-white pl-10">
           <li>Gold Rate 22 KT (916) : 8,709.00/g</li>
